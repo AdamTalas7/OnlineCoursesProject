@@ -1,0 +1,52 @@
+﻿@model OnlineCoursesWeb.Models.StudentSearch
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<form>
+    <div class="row justify-content-center">
+        <div class="form-floating mb-3 col-md-3">
+            <input asp-for="Name" class="form-control" id="floatingInput" placeholder="Name">
+            <label asp-for="Name" class="ms-1">Name</label>
+        </div>
+    </div>
+</form>
+<div class="table-responsive-md shadow-lg rounded-3">
+    <table class="table box-shadow table-hover">
+        <thead class="align-content-center">
+            <tr>
+                <th scope="col">
+                    @Html.DisplayNameFor(model => model.Students[0].Name)
+                </th>
+                <th scope="col">
+                    @Html.DisplayNameFor(model => model.Students[0].Email)
+                </th>
+
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.Students)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Name)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Email)
+                    </td>
+                    <td>
+                        <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                        <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                        <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

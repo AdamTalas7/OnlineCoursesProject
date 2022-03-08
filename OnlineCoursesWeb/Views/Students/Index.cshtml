@@ -1,19 +1,19 @@
 ﻿@model OnlineCoursesWeb.Models.StudentSearch
 
-@{
-    ViewData["Title"] = "Index";
-}
+@{ ViewData["Title"] = "Index"; }
+@{ ViewBag.Current = "Students"; }
 
-<h1>Index</h1>
+<h1>Students</h1>
 
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
 <form>
     <div class="row justify-content-center">
         <div class="form-floating mb-3 col-md-3">
             <input asp-for="Name" class="form-control" id="floatingInput" placeholder="Name">
             <label asp-for="Name" class="ms-1">Name</label>
+        </div>
+        <div class="row justify-content-between m-0">
+            <button type="submit" class="btn btn-warning shadow-lg mb-3 col-md-5">Search</button>
+            <button asp-action="create" class="btn btn-warning shadow-lg mb-3 col-md-5">Add new student</button>
         </div>
     </div>
 </form>
@@ -33,20 +33,19 @@
         <tbody>
             @foreach (var item in Model.Students)
             {
-                <tr>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.Name)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.Email)
-                    </td>
-                    <td>
-                        <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                        <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                        <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
-                    </td>
-                </tr>
-            }
+<tr>
+    <td>
+        @Html.DisplayFor(modelItem => item.Name)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Email)
+    </td>
+    <td>
+        <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+        <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+        <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+    </td>
+</tr>            }
         </tbody>
     </table>
 </div>

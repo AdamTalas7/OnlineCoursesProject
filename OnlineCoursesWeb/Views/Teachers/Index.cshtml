@@ -1,61 +1,52 @@
 ﻿@model OnlineCoursesWeb.Models.TeacherSearch
 
-@{
-    ViewData["Title"] = "Index";
-}
+@{ ViewData["Title"] = "Index"; }
+@{ ViewBag.Current = "Teachers"; }
 
-<h1>Index</h1>
-
-<!-- SelectList-es verzió, jelenleg nem működik
-
+<h1>Teachers</h1>
 <form>
     <div class="row justify-content-center">
-        <div class="mb-3 col-md-3">
-            <label asp-for="Courses" class="form-select">Courses</label>
-            <select asp-for="Courses" asp-items="Model.Courses" class="form-select form-select-lg mb-3"></select>
+        <div class="mb-3 col-md-4">
+            <div class="form-floating">
+                <select asp-for="Course" asp-items="Model.Courses" class="form-select" id="floatingSelect" aria-label="Floating label select example">
+                    <option selected value="">All courses</option>
+                </select>
+                <label for="floatingSelect">Course</label>
+            </div>
         </div>
-        <div class="form-floating mb-3 col-md-3">
-            <label asp-for="Languages" class="form-select">Languages</label>
-            <select asp-for="Languages" asp-items="Model.Languages" class="form-select form-select-lg mb-3"></select>
+
+        <div class="mb-3 col-md-4">
+            <div class="form-floating">
+                <select asp-for="Language" asp-items="Model.Languages" class="form-select" id="floatingSelect" aria-label="Floating label select example">
+                    <option selected value="">All courses</option>
+                </select>
+                <label for="floatingSelect">Course</label>
+            </div>
         </div>
-        <div class="form-floating mb-3 col-md-3">
-            <label asp-for="Levels" class="form-select">Levels</label>
-            <select asp-for="Levels" asp-items="Model.Levels" class="form-select form-select-lg mb-3"></select>
+
+        <div class="mb-3 col-md-4">
+            <div class="form-floating">
+                <select asp-for="Level" asp-items="Model.Levels" class="form-select" id="floatingSelect" aria-label="Floating label select example">
+                    <option selected value="">All courses</option>
+                </select>
+                <label for="floatingSelect">Course</label>
+            </div>
         </div>
     </div>
     <div class="row justify-content-between m-0">
         <button type="submit" class="btn btn-warning shadow-lg mb-3 col-md-5">Search</button>
         <button asp-action="create" class="btn btn-warning shadow-lg mb-3 col-md-5">Add new Teacher</button>
     </div>
-</form
-    -->
-<form>
-    <div class="row justify-content-center">
-        <div class="form-floating mb-3 col-md-3">
-            <input asp-for="Course" class="form-control" id="floatingInput" placeholder="Course">
-            <label asp-for="Course" class="ms-1">Course</label>
-        </div>
-        <div class="form-floating mb-3 col-md-3">
-            <input asp-for="Language" class="form-control" id="floatingInput" placeholder="Language">
-            <label asp-for="Language" class="ms-1">Language</label>
-        </div>
-        <div class="form-floating mb-3 col-md-3">
-            <input asp-for="Level" class="form-control" id="floatingInput" placeholder="Level">
-            <label asp-for="Level" class="ms-1">Level</label>
-        </div>
-    </div>
-    <div class="row justify-content-between m-0">
-        <button type="submit" class="btn btn-warning shadow-lg mb-3 col-md-5">Search</button>
-        <button asp-action="create" class="btn btn-warning shadow-lg mb-3 col-md-5">Add new student</button>
-    </div>
 </form>
-
 <div class="table-responsive-md shadow-lg rounded-3">
     <table class="table box-shadow table-hover">
         <thead class="align-content-center">
             <tr>
                 <th scope="col">
                     @Html.DisplayNameFor(model => model.Teachers[0].Name)
+                </th>
+                <th scope="col">
+                    @Html.DisplayNameFor(model => model.Teachers[0].Email)
                 </th>
                 <th scope="col">
                     @Html.DisplayNameFor(model => model.Teachers[0].Language)
@@ -66,31 +57,36 @@
                 <th scope="col">
                     @Html.DisplayNameFor(model => model.Teachers[0].Level)
                 </th>
+                <th scope="col">
+                    Modify
+                </th>
             </tr>
         </thead>
         <tbody>
             @foreach (var item in Model.Teachers)
             {
-                <tr>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.Name)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.Language)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.Course)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.Level)
-                    </td>
-                    <td>
-                        <a class="text-black" asp-action="Edit" asp-route-id="@item.Id">Edit</a>
-                        <a class="text-black" asp-action="Details" asp-route-id="@item.Id">Details</a>
-                        <a class="text-black" asp-action="Delete" asp-route-id="@item.Id">Delete</a>
-                    </td>
-                </tr>
-            }
+<tr>
+    <td>
+        @Html.DisplayFor(modelItem => item.Name)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Email)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Language)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Course)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Level)
+    </td>
+    <td>
+        <a class="text-black" asp-action="Edit" asp-route-id="@item.Id">Edit</a>
+        <a class="text-black" asp-action="Details" asp-route-id="@item.Id">Details</a>
+        <a class="text-black" asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+    </td>
+</tr>}
         </tbody>
     </table>
 </div>

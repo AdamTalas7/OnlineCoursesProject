@@ -1,8 +1,24 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
-}
+﻿@{ ViewData["Title"] = "Home Page"; }
+@{ ViewBag.Current = "Home"; }
 
 <div class="text-center">
     <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <hr />
+    <div class="row">
+        <div class="col-md-6">
+            <p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras consectetur at est ut cursus. Praesent ac quam lobortis, accumsan lorem dapibus, venenatis turpis. Etiam laoreet ipsum nec sollicitudin finibus. Pellentesque dictum dolor urna, et fringilla ipsum finibus sed. Nunc gravida commodo ex vel imperdiet. Curabitur in auctor augue. Cras tincidunt pharetra nisl vel lacinia. Nunc et convallis urna. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Duis nulla turpis, efficitur at elit in, porta tincidunt libero. In posuere consequat diam, sit amet tempor enim vehicula eget. Vestibulum eget mi vitae augue ornare vulputate nec non lorem. Integer tristique magna ac lacus vulputate sodales.</p>
+        </div>
+        <div class="col-md-6">
+            <p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras consectetur at est ut cursus. Praesent ac quam lobortis, accumsan lorem dapibus, venenatis turpis. Etiam laoreet ipsum nec sollicitudin finibus. Pellentesque dictum dolor urna, et fringilla ipsum finibus sed. Nunc gravida commodo ex vel imperdiet. Curabitur in auctor augue. Cras tincidunt pharetra nisl vel lacinia. Nunc et convallis urna. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Duis nulla turpis, efficitur at elit in, porta tincidunt libero. In posuere consequat diam, sit amet tempor enim vehicula eget. Vestibulum eget mi vitae augue ornare vulputate nec non lorem. Integer tristique magna ac lacus vulputate sodales.</p>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <a class="btn btn-outline-dark shadow-lg m-5" asp-area="" asp-controller="Students" asp-action="">Go to students</a>
+            </div>
+            <div class="col-md-6">
+                <a class="btn btn-outline-dark shadow-lg m-5" asp-area="" asp-controller="Teachers" asp-action="">Go to teachers</a>
+            </div>
+        </div>
+        
+    </div>
 </div>

@@ -1,47 +1,49 @@
 ﻿@model OnlineCoursesWeb.Models.Teacher
-
 @{
     ViewData["Title"] = "Edit";
 }
 
-<h1>Edit</h1>
+<div class="row center justify-content-center align-items-center">
 
-<h4>Teacher</h4>
-<hr />
-<div class="row">
-    <div class="col-md-4">
+    <div class=" blurred-card col-md-4">
+        <h1 class="text-center">Edit teacher</h1>
+        <hr />
         <form asp-action="Edit">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <input type="hidden" asp-for="Id" />
-            <div class="form-group">
-                <label asp-for="Name" class="control-label"></label>
-                <input asp-for="Name" class="form-control" />
+            <div class="form-floating mb-3">
+                <input asp-for="Name" class="form-control" id="floatingInput" placeholder="Name" required>
+                <label asp-for="Name" class="ms-1">Name</label>
                 <span asp-validation-for="Name" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="Language" class="control-label"></label>
-                <input asp-for="Language" class="form-control" />
+            <div class="form-floating mb-3">
+                <input asp-for="Email" class="form-control" id="floatingInput" placeholder="Email" required>
+                <label asp-for="Email" class="ms-1">Email</label>
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+            <div class="form-floating mb-3">
+                <input asp-for="Language" class="form-control" id="floatingInput" placeholder="Language" required>
+                <label asp-for="Language" class="ms-1">Language</label>
                 <span asp-validation-for="Language" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="Course" class="control-label"></label>
-                <input asp-for="Course" class="form-control" />
+            <div class="form-floating mb-3">
+                <input asp-for="Course" class="form-control" id="floatingInput" placeholder="Course" required>
+                <label asp-for="Course" class="ms-1">Course</label>
                 <span asp-validation-for="Course" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="Level" class="control-label"></label>
-                <input asp-for="Level" class="form-control" />
+            <div class="form-floating mb-3">
+                <input asp-for="Level" class="form-control" id="floatingInput" placeholder="Level" required>
+                <label asp-for="Level" class="ms-1">Level</label>
                 <span asp-validation-for="Level" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <input type="submit" value="Save" class="btn btn-primary" />
+            <div class="row justify-content-between m-0">
+                <button type="submit" value="Save" class="btn btn-warning mb-3 col-md-5">Save</button>
+                <button onclick="location.href='@Url.Action("Index", "Teachers")'" class="btn btn-warning mb-3 col-md-5">Back to list</button>
             </div>
         </form>
-    </div>
-</div>
 
-<div>
-    <a asp-action="Index">Back to List</a>
+    </div>
+
 </div>
 
 @section Scripts {

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
@@ -24,9 +25,9 @@ namespace OnlineCoursesWeb.Controllers
         {
             TeacherSearch teacherSearch = new TeacherSearch();
             teacherSearch.Teachers = await _context.Teacher.ToListAsync();
-            //teacherSearch.Courses = new SelectList(await _context.Teacher.Select(x => x.Course).Distinct().ToListAsync());
-            //teacherSearch.Languages = new SelectList(await _context.Teacher.Select(x => x.Language).Distinct().ToListAsync());
-            //teacherSearch.Levels = new SelectList(await _context.Teacher.Select(x => x.Level).Distinct().ToListAsync());
+            teacherSearch.Courses = new SelectList(await _context.Teacher.Select(x => x.Course).Distinct().ToListAsync());
+            teacherSearch.Languages = new SelectList(await _context.Teacher.Select(x => x.Language).Distinct().ToListAsync());
+            teacherSearch.Levels = new SelectList(await _context.Teacher.Select(x => x.Level).Distinct().ToListAsync());
 
             var data = _context.Teacher.Select(x => x);
 
@@ -65,13 +66,13 @@ namespace OnlineCoursesWeb.Controllers
 
             return View(teacher);
         }
-
+        [Authorize]
         // GET: Teachers/Create
         public IActionResult Create()
         {
             return View();
         }
-
+        [Authorize]
         // POST: Teachers/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
@@ -87,7 +88,7 @@ namespace OnlineCoursesWeb.Controllers
             }
             return View(teacher);
         }
-
+        [Authorize]
         // GET: Teachers/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
@@ -103,7 +104,7 @@ namespace OnlineCoursesWeb.Controllers
             }
             return View(teacher);
         }
-
+        [Authorize]
         // POST: Teachers/Edit/5
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
@@ -138,7 +139,7 @@ namespace OnlineCoursesWeb.Controllers
             }
             return View(teacher);
         }
-
+        [Authorize]
         // GET: Teachers/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
@@ -156,7 +157,7 @@ namespace OnlineCoursesWeb.Controllers
 
             return View(teacher);
         }
-
+        [Authorize]
         // POST: Teachers/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]

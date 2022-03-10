@@ -11,7 +11,6 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.UI.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.AspNetCore.WebUtilities;
 using Microsoft.Extensions.Logging;
 
@@ -20,14 +19,10 @@ namespace OnlineCoursesWeb.Areas.Identity.Pages.Account
     [AllowAnonymous]
     public class RegisterModel : PageModel
     {
-
         private readonly SignInManager<IdentityUser> _signInManager;
         private readonly UserManager<IdentityUser> _userManager;
         private readonly ILogger<RegisterModel> _logger;
         private readonly IEmailSender _emailSender;
-
-        ////list for the roles
-        //public List<SelectListItem> Roles { get; }
 
         public RegisterModel(
             UserManager<IdentityUser> userManager,
@@ -39,13 +34,6 @@ namespace OnlineCoursesWeb.Areas.Identity.Pages.Account
             _signInManager = signInManager;
             _logger = logger;
             _emailSender = emailSender;
-
-            ////contructor for the roles
-            //Roles = new List<SelectListItem>()
-            //{
-            //    new SelectListItem {Value = "Teacher", Text ="Teacher"},
-            //    new SelectListItem {Value = "Student", Text = "Student"},
-            //};
         }
 
         [BindProperty]
@@ -72,15 +60,8 @@ namespace OnlineCoursesWeb.Areas.Identity.Pages.Account
             [Display(Name = "Confirm password")]
             [Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
             public string ConfirmPassword { get; set; }
-
-            //input for the roles on the register page
-            //[Required]
-            //[Display(Name = "UserRole")]
-            //public string UserRole
-            //{
-            //    get; set;
-            //}
         }
+
         public async Task OnGetAsync(string returnUrl = null)
         {
             ReturnUrl = returnUrl;
@@ -109,8 +90,6 @@ namespace OnlineCoursesWeb.Areas.Identity.Pages.Account
 
                     await _emailSender.SendEmailAsync(Input.Email, "Confirm your email",
                         $"Please confirm your account by <a href='{HtmlEncoder.Default.Encode(callbackUrl)}'>clicking here</a>.");
-
-                    //await _userManager.AddToRoleAsync(user, Input.UserRole);
 
                     if (_userManager.Options.SignIn.RequireConfirmedAccount)
                     {

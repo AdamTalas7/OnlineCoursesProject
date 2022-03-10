@@ -2,18 +2,3 @@
 // for details on configuring this project to bundle and minify static web assets.
 
 // Write your JavaScript code.
-
-$(window).on('load && resize', function () {
-    if ($(window).width() > 760) {
-        $('#teachers').addClass('table');
-        $('#teachers').addClass('table-responsive');
-        $('#teachers').addClass('box-shadow');
-        $('#teachers').addClass('table-hover');
-    }
-    else {
-        $('#teachers').removeClass('table');
-        $('#teachers').addClass('table-responsive');
-        $('#teachers').addClass('box-shadow');
-        $('#teachers').addClass('table-hover');
-    }
-})

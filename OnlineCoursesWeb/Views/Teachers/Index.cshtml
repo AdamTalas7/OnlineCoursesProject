@@ -38,55 +38,88 @@
         <button asp-action="create" class="btn btn-warning shadow-lg mb-3 col-md-5">Add new Teacher</button>
     </div>
 </form>
+
+@* original table, not responsive *@
+
+@*<div class="table-responsive-md shadow-lg rounded-3">
+        <table class="table box-shadow table-hover">
+            <thead class="align-content-center">
+                <tr>
+                    <th scope="col">
+                        @Html.DisplayNameFor(model => model.Teachers[0].Name)
+                    </th>
+                    <th scope="col">
+                        @Html.DisplayNameFor(model => model.Teachers[0].Email)
+                    </th>
+                    <th scope="col">
+                        @Html.DisplayNameFor(model => model.Teachers[0].Language)
+                    </th>
+                    <th scope="col">
+                        @Html.DisplayNameFor(model => model.Teachers[0].Course)
+                    </th>
+                    <th scope="col">
+                        @Html.DisplayNameFor(model => model.Teachers[0].Level)
+                    </th>
+                    <th scope="col">
+                        Modify
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model.Teachers)
+                {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Email)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Language)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Course)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Level)
+        </td>
+        <td>
+            <a class="text-black" asp-action="Edit" asp-route-id="@item.Id">Edit</a>
+            <a class="text-black" asp-action="Details" asp-route-id="@item.Id">Details</a>
+            <a class="text-black" asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+        </td>
+    </tr>
+    }
+            </tbody>
+        </table>
+    </div>*@
+
+
+
+@* new table, responsive *@
+
 <div class="table-responsive-md shadow-lg rounded-3">
-    <table class="table box-shadow table-hover">
-        <thead class="align-content-center">
-            <tr>
-                <th scope="col">
-                    @Html.DisplayNameFor(model => model.Teachers[0].Name)
-                </th>
-                <th scope="col">
-                    @Html.DisplayNameFor(model => model.Teachers[0].Email)
-                </th>
-                <th scope="col">
-                    @Html.DisplayNameFor(model => model.Teachers[0].Language)
-                </th>
-                <th scope="col">
-                    @Html.DisplayNameFor(model => model.Teachers[0].Course)
-                </th>
-                <th scope="col">
-                    @Html.DisplayNameFor(model => model.Teachers[0].Level)
-                </th>
-                <th scope="col">
-                    Modify
-                </th>
+    <table id="teachers" class="" role="table">
+        <thead role="rowgroup">
+            <tr role="row">
+                <th role="columnheader">@Html.DisplayNameFor(model => model.Teachers[0].Name)</th>
+                <th role="columnheader">@Html.DisplayNameFor(model => model.Teachers[0].Email)</th>
+                <th role="columnheader">@Html.DisplayNameFor(model => model.Teachers[0].Language)</th>
+                <th role="columnheader">@Html.DisplayNameFor(model => model.Teachers[0].Course)</th>
+                <th role="columnheader">@Html.DisplayNameFor(model => model.Teachers[0].Level)</th>
             </tr>
         </thead>
-        <tbody>
-            @foreach (var item in Model.Teachers)
-            {
-<tr>
-    <td>
-        @Html.DisplayFor(modelItem => item.Name)
-    </td>
-    <td>
-        @Html.DisplayFor(modelItem => item.Email)
-    </td>
-    <td>
-        @Html.DisplayFor(modelItem => item.Language)
-    </td>
-    <td>
-        @Html.DisplayFor(modelItem => item.Course)
-    </td>
-    <td>
-        @Html.DisplayFor(modelItem => item.Level)
-    </td>
-    <td>
-        <a class="text-black" asp-action="Edit" asp-route-id="@item.Id">Edit</a>
-        <a class="text-black" asp-action="Details" asp-route-id="@item.Id">Details</a>
-        <a class="text-black" asp-action="Delete" asp-route-id="@item.Id">Delete</a>
-    </td>
-</tr>}
-        </tbody>
+        @foreach (var item in Model.Teachers)
+        {
+<tbody role="rowgroup">
+    <tr role="row">
+        <td role="cell">@Html.DisplayFor(modelItem => item.Name)</td>
+        <td role="cell">@Html.DisplayFor(modelItem => item.Email)</td>
+        <td role="cell">@Html.DisplayFor(modelItem => item.Language)</td>
+        <td role="cell">@Html.DisplayFor(modelItem => item.Course)</td>
+        <td role="cell">@Html.DisplayFor(modelItem => item.Level)</td>
+    </tr>
+</tbody>}
     </table>
 </div>

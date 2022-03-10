@@ -18,7 +18,7 @@ namespace OnlineCoursesWeb.Models
 
             if (!database.Teacher.Any())
             {
-                var lines = File.ReadAllLines("teachers.csv").Skip(1);
+                var lines = File.ReadAllLines(@"C:\Users\Forszt\Downloads\OnlineCoursesProject-master\teachers.csv").Skip(1);
                 foreach (var line in lines)
                 {
                     database.Teacher.Add(new Teacher(line));

@@ -99,6 +99,7 @@ body {
 
 .table-blur {
     opacity: 0.9;
+    border-bottom: 1px solid #000000;
 }
 
 .blurred-card {
@@ -118,7 +119,7 @@ body {
     opacity: 0.5;
 }
 
-@media screen and (min-width: 767px) {
+@media screen and (min-width: 768px) {
     .center {
         margin: 0;
         position: absolute;
@@ -137,7 +138,7 @@ body {
 
 /* Max width before this PARTICULAR table gets nasty. This query will take effect for any screen smaller than 760px and also iPads specifically. */
 /*@media only screen and (max-width: 760px), (min-device-width: 768px) and (max-device-width: 1024px)*/ 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
 
     /* Force table to not be like tables anymore */
     table, thead, tbody, th, td, tr {
@@ -165,7 +166,7 @@ body {
         border: none;
         border-bottom: 1px solid #eee;
         position: relative;
-        padding-left: 50%;
+        padding-left: 30%;
     }
 
         td:before {

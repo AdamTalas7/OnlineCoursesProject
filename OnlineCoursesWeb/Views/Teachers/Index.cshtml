@@ -33,10 +33,10 @@
             </div>
         </div>
     </div>
-    <div class="row justify-content-between m-0">
-        <button type="submit" class="btn btn-warning shadow-lg mb-3 col-md-5">Search</button>
-        <button asp-action="create" class="btn btn-warning shadow-lg mb-3 col-md-5">Add new Teacher</button>
-    </div>
+        <div class="row justify-content-between m-0">
+            <button type="submit" style="width:49%" class="btn btn-warning shadow-lg mb-3 col-md-5">Search</button>
+            <button asp-action="create" style="width:49%" class="btn btn-warning shadow-lg mb-3 col-md-5">Add new teacher</button>
+        </div>
 </form>
 
 @* original table, not responsive *@
@@ -99,8 +99,8 @@
 
 @* new table, responsive *@
 
-<div class="table-responsive-md shadow-lg rounded-3">
-    <table id="teachers" class="" role="table">
+<div class="shadow-lg rounded-3">
+    <table id="teachers">
         <thead role="rowgroup">
             <tr role="row">
                 <th role="columnheader">@Html.DisplayNameFor(model => model.Teachers[0].Name)</th>
@@ -112,14 +112,15 @@
         </thead>
         @foreach (var item in Model.Teachers)
         {
-<tbody role="rowgroup">
-    <tr role="row">
-        <td role="cell">@Html.DisplayFor(modelItem => item.Name)</td>
-        <td role="cell">@Html.DisplayFor(modelItem => item.Email)</td>
-        <td role="cell">@Html.DisplayFor(modelItem => item.Language)</td>
-        <td role="cell">@Html.DisplayFor(modelItem => item.Course)</td>
-        <td role="cell">@Html.DisplayFor(modelItem => item.Level)</td>
-    </tr>
-</tbody>}
+        <tbody role="rowgroup">
+            <tr role="row">
+            <td>@Html.DisplayFor(modelItem => item.Name)</td>
+            <td>@Html.DisplayFor(modelItem => item.Email)</td>
+            <td>@Html.DisplayFor(modelItem => item.Language)</td>
+            <td>@Html.DisplayFor(modelItem => item.Course)</td>
+            <td>@Html.DisplayFor(modelItem => item.Level)</td>
+            </tr>
+        </tbody>
+        }
     </table>
 </div>

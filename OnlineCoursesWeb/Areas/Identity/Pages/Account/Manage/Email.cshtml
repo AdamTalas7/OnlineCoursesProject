@@ -13,28 +13,32 @@
         <form id="email-form" method="post">
             <div asp-validation-summary="All" class="text-danger"></div>
             <div class="form-group">
-                <label asp-for="Email"></label>
                 @if (Model.IsEmailConfirmed)
                 {
-                    <div class="input-group">
-                        <input asp-for="Email" class="form-control" disabled />
-                        <div class="input-group-append">
-                            <span class="input-group-text text-success font-weight-bold">✓</span>
+                    <div class="form-floating mb-3 col-md-12">
+                        <div class="form-floating mb-3">
+                            <input asp-for="Email" type="email" class="form-control" id="floatingInput" placeholder="name@example.com" disabled>
+                            <label asp-for="Email" for="floatingInput">Email address</label>
                         </div>
                     </div>
                 }
-                 else
+                else
                 {
                     <input asp-for="Email" class="form-control" disabled />
                     <button id="email-verification" type="submit" asp-page-handler="SendVerificationEmail" class="btn btn-link">Send verification email</button>
                 }
             </div>
-            <div class="form-group">
-                <label asp-for="Input.NewEmail"></label>
-                <input asp-for="Input.NewEmail" class="form-control" />
+            <div class="form-floating mb-3 col-md-12">
+                <div class="form-floating mb-3">
+                    <input asp-for="Input.NewEmail" type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+                    <label asp-for="Input.NewEmail" for="floatingInput">New email address</label>
+                </div>
                 <span asp-validation-for="Input.NewEmail" class="text-danger"></span>
             </div>
-            <button id="change-email-button" type="submit" asp-page-handler="ChangeEmail" class="btn btn-primary">Change email</button>
+            <div class="row m-0">
+                <button id="change-email-button" type="submit" asp-page-handler="ChangeEmail" class="btn btn-warning col-md-12 shadow-lg" >Change email</button>
+            </div>
+            
         </form>
     </div>
 </div>

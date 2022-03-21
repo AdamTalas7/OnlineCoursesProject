@@ -14,7 +14,6 @@
                 <label for="floatingSelect">Course</label>
             </div>
         </div>
-
         <div class="mb-3 col-md-4">
             <div class="form-floating">
                 <select asp-for="Language" asp-items="Model.Languages" class="form-select" id="floatingSelect" aria-label="Floating label select example">
@@ -23,7 +22,6 @@
                 <label for="floatingSelect">Language</label>
             </div>
         </div>
-
         <div class="mb-3 col-md-4">
             <div class="form-floating">
                 <select asp-for="Level" asp-items="Model.Levels" class="form-select" id="floatingSelect" aria-label="Floating label select example">
@@ -33,10 +31,17 @@
             </div>
         </div>
     </div>
-        <div class="row justify-content-between m-0">
+    <div class="row justify-content-between m-0">
+        @if (User.IsInRole("Teacher") || User.IsInRole("Admin"))
+        {
             <button type="submit" style="width:49%" class="btn btn-warning shadow-lg mb-3 col-md-5">Search</button>
             <button asp-action="create" style="width:49%" class="btn btn-warning shadow-lg mb-3 col-md-5">Add new teacher</button>
-        </div>
+        }
+        else
+        {
+            <button type="submit" style="width:100%" class="btn btn-warning shadow-lg mb-3 col-md-5">Search</button>
+        }
+    </div>
 </form>
 
 @* original table, not responsive *@
@@ -100,27 +105,76 @@
 @* new table, responsive *@
 
 <div class="shadow-lg rounded-3">
-    <table id="teachers">
-        <thead role="rowgroup">
-            <tr role="row">
-                <th role="columnheader">@Html.DisplayNameFor(model => model.Teachers[0].Name)</th>
-                <th role="columnheader">@Html.DisplayNameFor(model => model.Teachers[0].Email)</th>
-                <th role="columnheader">@Html.DisplayNameFor(model => model.Teachers[0].Language)</th>
-                <th role="columnheader">@Html.DisplayNameFor(model => model.Teachers[0].Course)</th>
-                <th role="columnheader">@Html.DisplayNameFor(model => model.Teachers[0].Level)</th>
-            </tr>
-        </thead>
-        @foreach (var item in Model.Teachers)
-        {
-        <tbody role="rowgroup">
-            <tr role="row">
-            <td>@Html.DisplayFor(modelItem => item.Name)</td>
-            <td>@Html.DisplayFor(modelItem => item.Email)</td>
-            <td>@Html.DisplayFor(modelItem => item.Language)</td>
-            <td>@Html.DisplayFor(modelItem => item.Course)</td>
-            <td>@Html.DisplayFor(modelItem => item.Level)</td>
-            </tr>
-        </tbody>
-        }
-    </table>
-</div>
+        <table id="teachers">
+            <thead role="rowgroup">
+                <tr scope="row">
+                    <th role="columnheader">@Html.DisplayNameFor(model => model.Teachers[0].Name)</th>
+                    <th role="columnheader">@Html.DisplayNameFor(model => model.Teachers[0].Email)</th>
+                    <th role="columnheader">@Html.DisplayNameFor(model => model.Teachers[0].Language)</th>
+                    <th role="columnheader">@Html.DisplayNameFor(model => model.Teachers[0].Course)</th>
+                    <th role="columnheader">@Html.DisplayNameFor(model => model.Teachers[0].Level)</th>
+                    @if (User.IsInRole("Admin"))
+                    {
+                        <th role="columnheader">Modify</th>
+                    }
+                </tr>
+            </thead>
+            @foreach (var item in Model.Teachers)
+            {
+            <tbody role="rowgroup">
+                <tr scope="row">
+                    <td>@Html.DisplayFor(modelItem => item.Name)</td>
+                    <td>@Html.DisplayFor(modelItem => item.Email)</td>
+                    <td>@Html.DisplayFor(modelItem => item.Language)</td>
+                    <td>@Html.DisplayFor(modelItem => item.Course)</td>
+                    <td>@Html.DisplayFor(modelItem => item.Level)</td>
+                    @if (User.IsInRole("Admin"))
+                    {
+                        <td>
+                            <a class="text-black" asp-action="Edit" asp-route-id="@item.Id">Edit</a>
+                            <a class="text-black" asp-action="Details" asp-route-id="@item.Id">Details</a>
+                            <a class="text-black" asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                        </td>
+                    }
+                </tr>
+            </tbody>}
+        </table>
+    </div>
+
+@*<div class="shadow-lg rounded-3">
+        <table id="teachers">
+            <thead>
+                <tr>
+                    <th>@Html.DisplayNameFor(model => model.Teachers[0].Name)</th>
+                    <th>@Html.DisplayNameFor(model => model.Teachers[0].Email)</th>
+                    <th>@Html.DisplayNameFor(model => model.Teachers[0].Language)</th>
+                    <th>@Html.DisplayNameFor(model => model.Teachers[0].Course)</th>
+                    <th>@Html.DisplayNameFor(model => model.Teachers[0].Level)</th>
+                    @if (User.IsInRole("Admin"))
+                    {
+                        <th>Modify</th>
+                    }
+                </tr>
+            </thead>
+            @foreach (var item in Model.Teachers)
+            {
+                <tbody>
+                    <tr>
+                        <td>@Html.DisplayFor(modelItem => item.Name)</td>
+                        <td>@Html.DisplayFor(modelItem => item.Email)</td>
+                        <td>@Html.DisplayFor(modelItem => item.Language)</td>
+                        <td>@Html.DisplayFor(modelItem => item.Course)</td>
+                        <td>@Html.DisplayFor(modelItem => item.Level)</td>
+                        @if (User.IsInRole("Admin"))
+                        {
+                            <td>
+                                <a class="text-black" asp-action="Edit" asp-route-id="@item.Id">Edit</a>
+                                <a class="text-black" asp-action="Details" asp-route-id="@item.Id">Details</a>
+                                <a class="text-black" asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                            </td>
+                        }
+                    </tr>
+                </tbody>
+             }
+        </table>
+    </div>*@

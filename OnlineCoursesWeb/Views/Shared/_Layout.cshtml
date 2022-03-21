@@ -22,9 +22,12 @@
                         <li class="nav-item @(ViewBag.Current == "Home" ? "active-nav" : "")">
                             <a href="@Url.Action("Index","Home")" class="nav-link text-dark" target="_self">Home</a>
                         </li>
-                        <li class="nav-item   @(ViewBag.Current == "Students" ? "active-nav" : "")">
-                            <a href="@Url.Action("Index","Students")" class="nav-link text-dark" target="_self">Students</a>
-                        </li>
+                        @if (User.IsInRole("Admin"))
+                        {
+                            <li class="nav-item   @(ViewBag.Current == "Students" ? "active-nav" : "")">
+                                <a href = "@Url.Action("Index","Students")" class="nav-link text-dark" target="_self">Students</a>
+                            </li>
+                        }
                         <li class="nav-item   @(ViewBag.Current == "Teachers" ? "active-nav" : "")">
                             <a href="@Url.Action("Index","Teachers")" class="nav-link text-dark" target="_self">Teachers</a>
                         </li>

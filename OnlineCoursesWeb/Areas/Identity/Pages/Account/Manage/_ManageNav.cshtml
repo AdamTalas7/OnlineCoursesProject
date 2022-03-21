@@ -10,6 +10,6 @@
     {
         <li id="external-logins" class="btn btn-warning mb-3 w-100"><a id="external-login" class="nav-link @ManageNavPages.ExternalLoginsNavClass(ViewContext)" asp-page="./ExternalLogins">External logins</a></li>
     }
-    <li class="nav-item"><a class="btn btn-warning mb-3 w-100 @ManageNavPages.TwoFactorAuthenticationNavClass(ViewContext)" id="two-factor" asp-page="./TwoFactorAuthentication">Two-factor authentication</a></li>
-    <li class="nav-item"><a class="btn btn-warning mb-3 w-100 @ManageNavPages.PersonalDataNavClass(ViewContext)" id="personal-data" asp-page="./PersonalData">Personal data</a></li>*@
+    <li class="nav-item"><a class="btn btn-warning mb-3 w-100 @ManageNavPages.TwoFactorAuthenticationNavClass(ViewContext)" id="two-factor" asp-page="./TwoFactorAuthentication">Two-factor authentication</a></li>*@
+    <li class="nav-item"><a class="btn btn-warning mb-3 w-100 @(ViewBag.Current == "Delete" ? "active-nav" : "") @ManageNavPages.PersonalDataNavClass(ViewContext)" id="personal-data" asp-page="./PersonalData">Personal data</a></li>
 </ul>

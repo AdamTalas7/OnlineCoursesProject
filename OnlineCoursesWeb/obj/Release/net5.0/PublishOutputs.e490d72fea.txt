@@ -182,6 +182,8 @@ C:\Users\Forszt\Downloads\OnlineCoursesProject-master\OnlineCoursesWeb\obj\Relea
 C:\Users\Forszt\Downloads\OnlineCoursesProject-master\OnlineCoursesWeb\obj\Release\net5.0\PubTmp\Out\runtimes\win-arm64\lib\net5.0\dotnet-aspnet-codegenerator-design.exe
 C:\Users\Forszt\Downloads\OnlineCoursesProject-master\OnlineCoursesWeb\obj\Release\net5.0\PubTmp\Out\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
 C:\Users\Forszt\Downloads\OnlineCoursesProject-master\OnlineCoursesWeb\obj\Release\net5.0\PubTmp\Out\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\Forszt\Downloads\OnlineCoursesProject-master\OnlineCoursesWeb\obj\Release\net5.0\PubTmp\Out\OnlineCoursesWeb.Views.dll
+C:\Users\Forszt\Downloads\OnlineCoursesProject-master\OnlineCoursesWeb\obj\Release\net5.0\PubTmp\Out\OnlineCoursesWeb.Views.pdb
 C:\Users\Forszt\Downloads\OnlineCoursesProject-master\OnlineCoursesWeb\obj\Release\net5.0\PubTmp\Out\wwwroot\Identity\css\site.css
 C:\Users\Forszt\Downloads\OnlineCoursesProject-master\OnlineCoursesWeb\obj\Release\net5.0\PubTmp\Out\wwwroot\Identity\favicon.ico
 C:\Users\Forszt\Downloads\OnlineCoursesProject-master\OnlineCoursesWeb\obj\Release\net5.0\PubTmp\Out\wwwroot\Identity\js\site.js
@@ -218,6 +220,4 @@ C:\Users\Forszt\Downloads\OnlineCoursesProject-master\OnlineCoursesWeb\obj\Relea
 C:\Users\Forszt\Downloads\OnlineCoursesProject-master\OnlineCoursesWeb\obj\Release\net5.0\PubTmp\Out\wwwroot\Identity\lib\jquery\dist\jquery.min.js
 C:\Users\Forszt\Downloads\OnlineCoursesProject-master\OnlineCoursesWeb\obj\Release\net5.0\PubTmp\Out\wwwroot\Identity\lib\jquery\dist\jquery.min.map
 C:\Users\Forszt\Downloads\OnlineCoursesProject-master\OnlineCoursesWeb\obj\Release\net5.0\PubTmp\Out\wwwroot\Identity\lib\jquery\LICENSE.txt
-C:\Users\Forszt\Downloads\OnlineCoursesProject-master\OnlineCoursesWeb\obj\Release\net5.0\PubTmp\Out\OnlineCoursesWeb.Views.dll
-C:\Users\Forszt\Downloads\OnlineCoursesProject-master\OnlineCoursesWeb\obj\Release\net5.0\PubTmp\Out\OnlineCoursesWeb.Views.pdb
 C:\Users\Forszt\Downloads\OnlineCoursesProject-master\OnlineCoursesWeb\obj\Release\net5.0\PubTmp\Out\OnlineCoursesWeb.deps.json

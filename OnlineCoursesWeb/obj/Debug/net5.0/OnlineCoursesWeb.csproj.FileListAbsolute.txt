@@ -454,7 +454,6 @@ C:\Users\Forszt\Downloads\OnlineCoursesProject-master\OnlineCoursesWeb\bin\Debug
 C:\Users\Forszt\Downloads\OnlineCoursesProject-master\OnlineCoursesWeb\bin\Debug\net5.0\OnlineCoursesWeb.runtimeconfig.json
 C:\Users\Forszt\Downloads\OnlineCoursesProject-master\OnlineCoursesWeb\bin\Debug\net5.0\OnlineCoursesWeb.runtimeconfig.dev.json
 C:\Users\Forszt\Downloads\OnlineCoursesProject-master\OnlineCoursesWeb\bin\Debug\net5.0\OnlineCoursesWeb.dll
-C:\Users\Forszt\Downloads\OnlineCoursesProject-master\OnlineCoursesWeb\bin\Debug\net5.0\ref\OnlineCoursesWeb.dll
 C:\Users\Forszt\Downloads\OnlineCoursesProject-master\OnlineCoursesWeb\bin\Debug\net5.0\OnlineCoursesWeb.pdb
 C:\Users\Forszt\Downloads\OnlineCoursesProject-master\OnlineCoursesWeb\bin\Debug\net5.0\refs\Microsoft.AspNetCore.Antiforgery.dll
 C:\Users\Forszt\Downloads\OnlineCoursesProject-master\OnlineCoursesWeb\bin\Debug\net5.0\refs\Microsoft.AspNetCore.Authentication.Abstractions.dll
@@ -933,3 +932,4 @@ C:\Users\Forszt\Downloads\OnlineCoursesProject-master\OnlineCoursesWeb\obj\Debug
 C:\Users\Forszt\Downloads\OnlineCoursesProject-master\OnlineCoursesWeb\obj\Debug\net5.0\Razor\Areas\Identity\Pages\Error.cshtml.g.cs
 C:\Users\Forszt\Downloads\OnlineCoursesProject-master\OnlineCoursesWeb\obj\Debug\net5.0\Razor\Areas\Identity\Pages\_ValidationScriptsPartial.cshtml.g.cs
 C:\Users\Forszt\Downloads\OnlineCoursesProject-master\OnlineCoursesWeb\obj\Debug\net5.0\Razor\Areas\Identity\Pages\_ViewImports.cshtml.g.cs
+C:\Users\Forszt\Downloads\OnlineCoursesProject-master\OnlineCoursesWeb\bin\Debug\net5.0\ref\OnlineCoursesWeb.dll

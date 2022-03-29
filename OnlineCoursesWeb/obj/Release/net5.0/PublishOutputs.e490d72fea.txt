@@ -1,7 +1,10 @@
 C:\Users\Forszt\Downloads\OnlineCoursesProject-master\OnlineCoursesWeb\obj\Release\net5.0\PubTmp\Out\OnlineCoursesWeb.exe
+C:\Users\Forszt\Downloads\OnlineCoursesProject-master\OnlineCoursesWeb\obj\Release\net5.0\PubTmp\Out\wwwroot\business-3d-stack-of-different-books.png
 C:\Users\Forszt\Downloads\OnlineCoursesProject-master\OnlineCoursesWeb\obj\Release\net5.0\PubTmp\Out\wwwroot\css\site.css
 C:\Users\Forszt\Downloads\OnlineCoursesProject-master\OnlineCoursesWeb\obj\Release\net5.0\PubTmp\Out\wwwroot\favicon.ico
 C:\Users\Forszt\Downloads\OnlineCoursesProject-master\OnlineCoursesWeb\obj\Release\net5.0\PubTmp\Out\wwwroot\icon.png
+C:\Users\Forszt\Downloads\OnlineCoursesProject-master\OnlineCoursesWeb\obj\Release\net5.0\PubTmp\Out\wwwroot\icons8-student-128.svg
+C:\Users\Forszt\Downloads\OnlineCoursesProject-master\OnlineCoursesWeb\obj\Release\net5.0\PubTmp\Out\wwwroot\icons8-student-64.svg
 C:\Users\Forszt\Downloads\OnlineCoursesProject-master\OnlineCoursesWeb\obj\Release\net5.0\PubTmp\Out\wwwroot\js\site.js
 C:\Users\Forszt\Downloads\OnlineCoursesProject-master\OnlineCoursesWeb\obj\Release\net5.0\PubTmp\Out\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css
 C:\Users\Forszt\Downloads\OnlineCoursesProject-master\OnlineCoursesWeb\obj\Release\net5.0\PubTmp\Out\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css.map
@@ -60,6 +63,7 @@ C:\Users\Forszt\Downloads\OnlineCoursesProject-master\OnlineCoursesWeb\obj\Relea
 C:\Users\Forszt\Downloads\OnlineCoursesProject-master\OnlineCoursesWeb\obj\Release\net5.0\PubTmp\Out\wwwroot\lib\jquery\dist\jquery.min.js
 C:\Users\Forszt\Downloads\OnlineCoursesProject-master\OnlineCoursesWeb\obj\Release\net5.0\PubTmp\Out\wwwroot\lib\jquery\dist\jquery.min.map
 C:\Users\Forszt\Downloads\OnlineCoursesProject-master\OnlineCoursesWeb\obj\Release\net5.0\PubTmp\Out\wwwroot\lib\jquery\LICENSE.txt
+C:\Users\Forszt\Downloads\OnlineCoursesProject-master\OnlineCoursesWeb\obj\Release\net5.0\PubTmp\Out\wwwroot\taxi-online-learning.svg
 C:\Users\Forszt\Downloads\OnlineCoursesProject-master\OnlineCoursesWeb\obj\Release\net5.0\PubTmp\Out\appsettings.Development.json
 C:\Users\Forszt\Downloads\OnlineCoursesProject-master\OnlineCoursesWeb\obj\Release\net5.0\PubTmp\Out\appsettings.json
 C:\Users\Forszt\Downloads\OnlineCoursesProject-master\OnlineCoursesWeb\obj\Release\net5.0\PubTmp\Out\OnlineCoursesWeb.dll

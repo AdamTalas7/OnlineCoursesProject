@@ -124,7 +124,7 @@
             <tbody role="rowgroup">
                 <tr scope="row">
                     <td>@Html.DisplayFor(modelItem => item.Name)</td>
-                    <td>@Html.DisplayFor(modelItem => item.Email)</td>
+                    <td><a class="text-black text-decoration-none" href="mailto:@Html.DisplayFor(modelItem => item.Email)">@Html.DisplayFor(modelItem => item.Email)</a></td>
                     <td>@Html.DisplayFor(modelItem => item.Language)</td>
                     <td>@Html.DisplayFor(modelItem => item.Course)</td>
                     <td>@Html.DisplayFor(modelItem => item.Level)</td>

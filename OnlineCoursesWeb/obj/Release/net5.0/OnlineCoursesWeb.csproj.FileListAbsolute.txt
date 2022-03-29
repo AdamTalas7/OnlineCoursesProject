@@ -485,3 +485,4 @@ C:\Users\Forszt\Downloads\OnlineCoursesProject-master\OnlineCoursesWeb\obj\Relea
 C:\Users\Forszt\Downloads\OnlineCoursesProject-master\OnlineCoursesWeb\obj\Release\net5.0\ref\OnlineCoursesWeb.dll
 C:\Users\Forszt\Downloads\OnlineCoursesProject-master\OnlineCoursesWeb\obj\Release\net5.0\OnlineCoursesWeb.pdb
 C:\Users\Forszt\Downloads\OnlineCoursesProject-master\OnlineCoursesWeb\obj\Release\net5.0\OnlineCoursesWeb.genruntimeconfig.cache
+C:\Users\Forszt\Downloads\OnlineCoursesProject-master\OnlineCoursesWeb\obj\Release\net5.0\Razor\Views\Home\FAQ.cshtml.g.cs

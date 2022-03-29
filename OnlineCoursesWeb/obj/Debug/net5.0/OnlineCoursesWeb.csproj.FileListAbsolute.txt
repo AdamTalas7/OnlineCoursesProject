@@ -933,3 +933,4 @@ C:\Users\Forszt\Downloads\OnlineCoursesProject-master\OnlineCoursesWeb\obj\Debug
 C:\Users\Forszt\Downloads\OnlineCoursesProject-master\OnlineCoursesWeb\obj\Debug\net5.0\Razor\Areas\Identity\Pages\_ValidationScriptsPartial.cshtml.g.cs
 C:\Users\Forszt\Downloads\OnlineCoursesProject-master\OnlineCoursesWeb\obj\Debug\net5.0\Razor\Areas\Identity\Pages\_ViewImports.cshtml.g.cs
 C:\Users\Forszt\Downloads\OnlineCoursesProject-master\OnlineCoursesWeb\bin\Debug\net5.0\ref\OnlineCoursesWeb.dll
+C:\Users\Forszt\Downloads\OnlineCoursesProject-master\OnlineCoursesWeb\obj\Debug\net5.0\Razor\Views\Home\FAQ.cshtml.g.cs

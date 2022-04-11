@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.32106.194
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OnlineCoursesWeb", "OnlineCoursesWeb\OnlineCoursesWeb.csproj", "{9D5C72BA-87C9-4864-BF61-8A83C3F12A6F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OnlineCoursesWeb", "OnlineCoursesWeb\OnlineCoursesWeb.csproj", "{9D5C72BA-87C9-4864-BF61-8A83C3F12A6F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OnlineCoursesTest", "OnlineCoursesTest\OnlineCoursesTest.csproj", "{4B2DF888-5A0C-47C3-A667-D65DCBE10D52}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{9D5C72BA-87C9-4864-BF61-8A83C3F12A6F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9D5C72BA-87C9-4864-BF61-8A83C3F12A6F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9D5C72BA-87C9-4864-BF61-8A83C3F12A6F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4B2DF888-5A0C-47C3-A667-D65DCBE10D52}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4B2DF888-5A0C-47C3-A667-D65DCBE10D52}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4B2DF888-5A0C-47C3-A667-D65DCBE10D52}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4B2DF888-5A0C-47C3-A667-D65DCBE10D52}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

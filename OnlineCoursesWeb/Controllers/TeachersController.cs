@@ -21,6 +21,7 @@ namespace OnlineCoursesWeb.Controllers
         }
 
         // GET: Teachers
+        [Authorize]
         public async Task<IActionResult> Index(string Language, string Course, string Level)
         {
             TeacherSearch teacherSearch = new TeacherSearch();
@@ -48,8 +49,8 @@ namespace OnlineCoursesWeb.Controllers
             return View(teacherSearch);
 
         }
-
         // GET: Teachers/Details/5
+        [Authorize]
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null)

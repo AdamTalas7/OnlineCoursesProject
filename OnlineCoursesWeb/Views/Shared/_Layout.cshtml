@@ -18,16 +18,9 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <ul class="navbar-nav me-auto mb-2 mb-md-0">
-
                         <li class="nav-item @(ViewBag.Current == "Home" ? "active-nav" : "")">
                             <a href="@Url.Action("Index","Home")" class="nav-link text-dark" target="_self">Home</a>
                         </li>
-                        @if (User.IsInRole("Admin"))
-                        {
-                            <li class="nav-item   @(ViewBag.Current == "Students" ? "active-nav" : "")">
-                                <a href="@Url.Action("Index","Students")" class="nav-link text-dark" target="_self">Students</a>
-                            </li>
-                        }
                         @if (User.Identity.IsAuthenticated)
                         {
                             <li class="nav-item   @(ViewBag.Current == "Teachers" ? "active-nav" : "")">
@@ -48,36 +41,11 @@
             </div>
         </nav>
     </header>
-    @*<nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index"></a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index"></a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy"></a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Students" asp-action=""></a>
-                        </li>
-                    </ul>
-                    <partial name="_LoginPartial" />
-                </div>
-            </div>
-        </nav>*@
-
     <div class="container">
         <main role="main" class="pb-3">
             @RenderBody()
         </main>
     </div>
-
     <footer class="border-top footer text-center  text-muted">
         <div class="container">
             &copy; 2022 - Tálas Ádám, Medgyesy Petra, Forszt Mihály

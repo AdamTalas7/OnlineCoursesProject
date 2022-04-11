@@ -102,6 +102,7 @@ namespace OnlineCoursesWeb.Areas.Identity.Pages.Account
                         values: new { area = "Identity", userId = user.Id, code = code, returnUrl = returnUrl },
                         protocol: Request.Scheme);
 
+
                     await _userManager.AddToRoleAsync(user, Input.UserRole);
 
                     await _emailSender.SendEmailAsync(Input.Email, "Confirm your email",

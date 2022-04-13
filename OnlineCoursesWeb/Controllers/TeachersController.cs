@@ -49,6 +49,7 @@ namespace OnlineCoursesWeb.Controllers
             return View(teacherSearch);
 
         }
+        
         // GET: Teachers/Details/5
         [Authorize]
         public async Task<IActionResult> Details(int? id)
@@ -67,8 +68,9 @@ namespace OnlineCoursesWeb.Controllers
 
             return View(teacher);
         }
-        [Authorize(Roles = "Admin, Teacher")]
+        
         // GET: Teachers/Create
+        [Authorize(Roles = "Admin, Teacher")]
         public IActionResult Create()
         {
             return View();
@@ -80,7 +82,7 @@ namespace OnlineCoursesWeb.Controllers
         [HttpPost]
         [ValidateAntiForgeryToken]
         [Authorize(Roles = "Admin, Teacher")]
-        public async Task<IActionResult> Create([Bind("Id,Name,Language,Course,Level")] Teacher teacher)
+        public async Task<IActionResult> Create([Bind("Id,Name,Email,Language,Course,Level")] Teacher teacher)
         {
             if (ModelState.IsValid)
             {
@@ -90,8 +92,9 @@ namespace OnlineCoursesWeb.Controllers
             }
             return View(teacher);
         }
-        [Authorize]
+        
         // GET: Teachers/Edit/5
+        [Authorize]
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
@@ -106,13 +109,14 @@ namespace OnlineCoursesWeb.Controllers
             }
             return View(teacher);
         }
-        [Authorize]
+        
         // POST: Teachers/Edit/5
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
+        [Authorize]
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Name,Language,Course,Level")] Teacher teacher)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Name,Email,Language,Course,Level")] Teacher teacher)
         {
             if (id != teacher.Id)
             {
@@ -141,8 +145,9 @@ namespace OnlineCoursesWeb.Controllers
             }
             return View(teacher);
         }
-        [Authorize]
+        
         // GET: Teachers/Delete/5
+        [Authorize]
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)
@@ -159,8 +164,9 @@ namespace OnlineCoursesWeb.Controllers
 
             return View(teacher);
         }
-        [Authorize]
+        
         // POST: Teachers/Delete/5
+        [Authorize]
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)

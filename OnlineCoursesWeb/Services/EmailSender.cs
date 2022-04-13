@@ -17,12 +17,12 @@ namespace OnlineCoursesWeb.Services
 
         public Task SendEmailAsync(string email, string subject, string htmlMessage)
         {
-            MailMessage uzenet = new MailMessage();
-            uzenet.From = new MailAddress("onlinecourses.confirmation@gmail.com");
-            uzenet.Subject = subject;
-            uzenet.To.Add(new MailAddress(email));
-            uzenet.Body = "<html><body> " + htmlMessage + "</body></html> ";
-            uzenet.IsBodyHtml = true;
+            MailMessage message = new MailMessage();
+            message.From = new MailAddress("onlinecourses.confirmation@gmail.com");
+            message.Subject = subject;
+            message.To.Add(new MailAddress(email));
+            message.Body = "<html><body> " + htmlMessage + "</body></html> ";
+            message.IsBodyHtml = true;
 
             var smtpClient = new SmtpClient("smtp.gmail.com")
             {
@@ -30,7 +30,7 @@ namespace OnlineCoursesWeb.Services
                 Credentials = new NetworkCredential("onlinecourses.confirmation@gmail.com", "prnfpbnafzvxktvo"),
                 EnableSsl = true
             };
-            smtpClient.Send(uzenet);
+            smtpClient.Send(message);
             return Task.CompletedTask;
         }
     }

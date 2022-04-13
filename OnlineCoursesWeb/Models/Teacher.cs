@@ -16,6 +16,7 @@ namespace OnlineCoursesWeb.Models
 
         public Teacher()
         {
+
         }
 
         public Teacher(string line)

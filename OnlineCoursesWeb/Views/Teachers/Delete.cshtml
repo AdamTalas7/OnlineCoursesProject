@@ -16,6 +16,12 @@
                 @Html.DisplayFor(model => model.Name)
             </dd>
             <dt class="col-sm-6">
+                @Html.DisplayNameFor(model => model.Email):
+            </dt>
+            <dd class="col-sm-6">
+                @Html.DisplayFor(model => model.Email)
+            </dd>
+            <dt class="col-sm-6">
                 @Html.DisplayNameFor(model => model.Language):
             </dt>
             <dd class="col-sm-6">
@@ -40,11 +46,13 @@
                     <input type="hidden" asp-for="Id" />
                     <input type="submit" value="Delete" class="btn btn-danger mb-3 col-md-12" />
                 </div>
-
-                <div class="row">
-                    <button onclick="location.href='@Url.Action("Index", "Teacher")'" class="btn btn-warning mb-3 col-md-12">Back to list</button>
-                </div>
             </form>
+            <div>
+                <div class="row">
+                    <button onclick="location.href='@Url.Action("Index", "Teachers")'" class="btn btn-warning mb-3 col-md-12">Back to list</button>
+                </div>
+            </div>
+            
         </div>
     </div>
 </div>
